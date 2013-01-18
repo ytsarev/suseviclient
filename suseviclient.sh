@@ -252,6 +252,7 @@ imageupload() {
                 if [ -n "$deploy_through_client" ]; then
                   echo "Downloading and gunzipping image to local machine..."
                   #Piping zcat directly to the server through ssh performs horribly slow, scp behaves much faster in this scenario
+                  imagelink="http://$studioserver$imagelink"
                   curl "$imagelink" | zcat > "/tmp/$tarname"
                   echo "Copying tar to ESXi server..."
                   $scp "/tmp/$tarname" root@$esx_server:"/vmfs/volumes/$datastore/$tarname"
