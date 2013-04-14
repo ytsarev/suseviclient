@@ -1,3 +1,9 @@
+Project moved under [openSUSE umbrella](https://github.com/openSUSE/suseviclient)
+=======================================
+
+Since now, all new commits will go there.
+
+
 SUSE VI Client
 ==============
 
